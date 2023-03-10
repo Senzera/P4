@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>hide/show, fading, sliding, animate, callback, chaining, dan get/set</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="nav_links">
+            <li><a href="index.html">Page 1</a></li>
+            <li><a href="page2.html">Page 2</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>animate, callback, chaining, dan get/set</h2>
+
+        <button id="animate-button">Animate</button>
+        <button id="callback-button">Callback</button>
+        <button id="chaining-button">Chaining</button>
+        <button id="get-set-button">Get/Set</button>
+
+        <div id="effect-div" style="background:#0081fd;height:100px;width:100px;position:absolute;"></div>
+
+        <div id="result-div">
+            Hasil:
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#animate-button").click(function () {
+                $("#effect-div").animate({
+                    width: "300px",
+                    height: "300px"
+                }, 1000);
+            });
+            $("#callback-button").click(function () {
+                $("#effect-div").fadeOut(1000, function () {
+                    $("#result-div").html("Elemen telah di-fade out.");
+                });
+            });
+            $("#chaining-button").click(function () {
+                $("#effect-div")
+                    .slideUp()
+                    .slideDown()
+                    .fadeOut();
+            });
+            $("#get-set-button").click(function () {
+                var width = $("#effect-div").width();
+                $("#result-div").html("Lebar elemen saat ini: " + width + "px");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

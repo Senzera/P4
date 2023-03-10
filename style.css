@@ -1,0 +1,42 @@
+body {
+	font-family: Arial, sans-serif;
+	color: #333;
+	background-color: #f4f4f4;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 800px;
+	padding: 30px;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.header {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.header h1 {
+	font-size: 36px;
+	margin: 0;
+	color: #1abc9c;
+}
+
+.tagline {
+	font-size: 18px;
+	margin: 0;
+	color: #555;
+}
+
+.content h2 {
+	font-size: 24px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	color: #1abc9c;
+}
+
+.content h3 {
+	font-size: 20px;
+	margin-top: 30px;
+	margin-bottom: 10px
